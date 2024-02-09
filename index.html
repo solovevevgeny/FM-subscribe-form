@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <script src="./main.js"></script>
+  <link rel="stylesheet" href="./styles.css">
+  
+</head>
+<body>
+
+  <main>
+    <div class="card">
+      <div class="card__body">
+        <h1>Stay updated!</h1>
+
+        <p>Join 60,000+ product managers receiving monthly updates on:</p> 
+      
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+        
+        
+        
+      <div class="card__body-email-form">
+        <label for="email"><strong>Email address</strong></label>
+        <input type="text" id="email" placeholder="email@company.com">
+        <button id="email-button">Subscribe to monthly newsletter</button>
+        <span class="error" id="span-error">error</span>
+      </div>
+        
+      </div>
+    
+    <div class="card__img">
+      <img src="./assets/images/illustration-sign-up-desktop.svg" alt="">
+    </div>
+  </main>
+
+  <div class="overlay" id="overlay"></div>
+
+  <div class="card-popup"  id="card-popup">
+    <div class="icon">
+        <img src="./assets/images/icon-success.svg" alt="">
+    </div>
+
+    <h1>Thanks for subscribing!</h1>
+    <p>
+        A confirmation email has been sent to <strong>ash@loremcompany.com</strong>. 
+        Please open it and click the button inside to confirm your subscription.
+    </p>
+
+    <div class="card-popup_button">
+        <button onClick="closePopup()">Dismiss message</button>
+    </div>
+</div>
+
+  <!-- Sign-up form start -->
+
+ 
+
+  <!-- Sign-up form end -->
+
+  <!-- Success message start -->
+
+  <!-- Thanks for subscribing!
+
+ 
+
+  Dismiss message -->
+
+  <!-- Success message end -->
+  
+  
+</body>
+</html>

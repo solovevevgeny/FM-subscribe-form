@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'Roboto';
+    src: './assets/fonts/Roboto-Regular.ttf';
+}
+
+:root {
+    --ff:Roboto;
+    --fw-normal: 400;
+    --fw-bold: 700;
+
+    --fs-normal: 16px;
+    --fs-sm: 14px;
+
+    --color-Tomato: hsl(4, 100%, 67%);
+    
+    --color-Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --color-Charcoal-Grey: hsl(235, 18%, 26%);
+    --color-Grey: hsl(231, 7%, 60%);
+    --color-White: hsl(0, 0%, 100%);
+
+    --radius: 1rem;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--ff);
+    font-weight: var(--fw-normal);
+    background: var(--color-Charcoal-Grey);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+.card {
+    /* display:flex;
+    justify-content: space-between;
+    align-items: center; */
+    display: grid;
+    gap: 40px;
+    grid-template-columns: auto auto;
+
+    background: var(--color-White);
+
+    padding: 20px;
+    border-radius: var(--radius);
+    /* max-width: 800px; */
+
+    color: var(--color-Charcoal-Grey);
+    font-size: var(--fs-sm);
+
+}
+
+h1 {
+    font-size: 42px;
+    margin: 0 0 20px 0;
+}
+
+
+.card__body p {
+    font-size: var(--fs-sm);
+    margin: 0 0 20px 0;
+}
+
+.card__body ul {
+    margin: 0 0 30px 30px;
+    list-style: none;
+    list-style-image: url('./assets/images/icon-list.svg');
+    
+}
+
+
+.card__body ul li {
+    padding-left: 10px;
+    /* display: block; */
+    
+}
+
+.card__img {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.card__img img {
+    height: 450px;
+}
+
+.card__body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.card__body button{
+    background: var(--color-Charcoal-Grey);
+    padding: 12px 30px;
+    color: var(--color-White);
+    font-weight: var(--fw-bold);
+    border: 0;
+    cursor: pointer;
+    border-radius: 0.3rem;
+}
+
+.card__body-email-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.card__body-email-form input {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-Grey);
+
+}
+
+.error {
+    padding: 10px 0;
+    color: var(--color-Tomato);
+    display: none;
+}
+
+
+.card-popup {
+    background: var(--color-White);
+    padding: 30px;
+    border-radius: var(--radius);
+    max-width: 500px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr;
+    color: var(--color-Dark-Slate-Grey);
+    display: none;
+    position: absolute;
+    z-index: 2;
+}
+
+
+.card-popup button {
+    background: var(--color-Charcoal-Grey);
+    padding: 12px 30px;
+    color: var(--color-White);
+    font-weight: var(--fw-bold);
+    border: 0;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    width:100%;
+}
+
+.overlay {
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: var(--color-Charcoal-Grey);
+    z-index:2;
+    opacity: 80%;
+    display: none;
+}
